@@ -12,7 +12,7 @@
     "react-scroll": "^1.7.12"
   },
   "scripts": {
-    "homepage": "https://jacobyeung.github.io/myWebsite",
+    "homepage": "https://jacobyeung.github.io/react-gh-pages",
     "predeplot": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
@@ -39,12 +39,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobyeung/myWebsite.git"
+    "url": "git+https://github.com/jacobyeung/react-gh-pages.git"
   },
   "author": "Jacob Yeung",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jacobyeung/myWebsite/issues"
+    "url": "https://github.com/jacobyeung/react-gh-pages/issues"
   },
-  "homepage": "https://github.com/jacobyeung/myWebsite#readme"
+  "homepage": "https://github.com/jacobyeung/react-gh-pages#readme"
 }
