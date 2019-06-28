@@ -66,7 +66,7 @@ export default function Education() {
                 </Paper>
             </Grid>
             <Grid xs={6}>
-                Hi
+                
             </Grid>
         </Grid>
     )
