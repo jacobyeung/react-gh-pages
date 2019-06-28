@@ -28,7 +28,7 @@ export default function Navbar() {
         <AppBar position="fixed" className={classes.toolBar}>
           <Toolbar className={classes.toolBar}>
             <Button color="inherit" className={classes.button}>Home</Button>
-            <Button color="inherit" className={classes.button}>About Me</Button>
+            <Button color="inherit" className={classes.button}>About</Button>
             <Button color="inherit" className={classes.button}>Education</Button>
             <Button color="inherit" className={classes.button}>Experience</Button>
             <Button color="inherit" className={classes.button}>Skills</Button>
