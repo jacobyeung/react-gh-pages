@@ -2,8 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Installation Steps
 Open terminal.<br>
-Run 'git clone https://github.com/jacobyeung/react-gh-pages.git' . <br>
+Run 'git clone https://github.com/jacobyeung/react-gh-pages.git'. <br>
 Run 'npm install'.<br>
+Run 'npm start'. <br>
 
 ## Available Scripts
 
