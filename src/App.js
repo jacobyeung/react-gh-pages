@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import Navbar from './Components/Navbar'
-import Background from './Components/background';
+import About from './Components/About';
 import './App.css';
 
 function App() {
@@ -15,8 +14,8 @@ function App() {
         <h1>
           — Jacob Yeung —
         </h1>
-
       </header>
+      <About/>
     </div>
   );
 }
