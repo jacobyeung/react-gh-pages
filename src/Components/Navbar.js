@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const styles = {
   background: {
     borderBottom: "0px",
-    background: 'linear-gradient(to bottom, #097DBC, #049FD9)',
+    background: 'linear-gradient(to bottom, #4881c799,  #6599d8, #4881c7)',
     fontSize: 20
   },
 
@@ -21,7 +21,7 @@ export default class Navbar extends React.Component {
       <nav className="nav" id="navbar" style={styles.background}>
         <div className="nav-content" >
           <ul className="nav-items">
-            <li className="nav-item" style={{padding: '0px 0px 0px 100px', color: 'white'}}>
+            <li className="nav-item" style={{color: 'white'}}>
               <Link
                 activeClass="active"
                 to="section1"
@@ -84,6 +84,7 @@ export default class Navbar extends React.Component {
           </ul>
         </div>
       </nav>
+
     );
   }
 }

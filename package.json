@@ -8,8 +8,9 @@
     "react-dom": "^16.8.6",
     "react-native": "^0.59.9",
     "react-native-web": "^0.11.4",
-    "react-scripts": "3.0.1",
-    "react-scroll": "^1.7.12"
+    "react-scripts": "^3.0.1",
+    "react-scroll": "^1.7.12",
+    "semantic-ui-react": "^0.87.2"
   },
   "scripts": {
     "homepage": "https://jacobyeung.github.io/react-gh-pages",
