@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles, Paper } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import { createRequireFromPath } from 'module';
+// import Img from 'react-image';
+
 
 const styles = makeStyles(theme =>({
     title: {
@@ -40,6 +43,8 @@ const styles = makeStyles(theme =>({
         backgroundColor: 'transparent',
         fontWeight: 'normal',
         paddingTop: '3vh',
+        flexShrink: 1,
+        alignContent: 'center'
     }
 
 }));
@@ -48,12 +53,10 @@ export default function Education() {
     const classes = styles();
     return (
         <Grid container className={classes.background}>
-            <Grid xs={12}>
-                <Paper className={classes.title}>
-                    Education
-                </Paper>
-            </Grid>
             <Grid xs={6}>
+                <div className={classes.title}>
+                    Education
+                </div>
                 <Paper className={classes.subTitle}>
                     University of California, Berkeley
                     <Paper className={classes.ssTitle}>
@@ -66,7 +69,7 @@ export default function Education() {
                 </Paper>
             </Grid>
             <Grid xs={6}>
-                hi
+                <img src={require("../Images/jacobyeung.jpg")} style={{width: '80%'}}/>
             </Grid>
         </Grid>
     )
