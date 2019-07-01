@@ -1,76 +1,80 @@
 import React from 'react';
-import { makeStyles, Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import { createRequireFromPath } from 'module';
-// import Img from 'react-image';
-
-
+import Berkeley from '../Images/berkeley.png';
 const styles = makeStyles(theme =>({
     title: {
+        display: 'flex',
         flex: 0.5,
         fontSize: '5vh',
-        textAlign: 'left',
-        paddingTop: '5vh',
+        alignItems: 'center',
         paddingLeft: '5vh',
-        backgroundColor: 'transparent',
-        boxShadow: 'none',
         height: '10vh'
     },
     background: {
         flex: 1,
-        backgroundColor: '#dfdfdf',
         minHeight: '50vh'
     },
     ssTitle: {
         flex: 1,
         fontSize: '2.5vh',
-        boxShadow: 'none',
-        backgroundColor: 'transparent',
         fontWeight: 'normal',
-        paddingTop: '3vh',
+
     },
     subTitle: {
         flex: 1,
         fontSize: '4vh',
-        boxShadow: 'none',
-        backgroundColor: 'transparent',
         paddingLeft: '5vh',
+        paddingBottom: '0'
     
     },
     body: {
         fontSize: '2vh',
-        boxShadow: 'none',
-        backgroundColor: 'transparent',
         fontWeight: 'normal',
-        paddingTop: '3vh',
         flexShrink: 1,
-        alignContent: 'center'
-    }
 
+    },
+    content: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyItems: 'center',
+        alignItems: 'flex-start',
+        paddingBottom: '5vh'
+    },
+    logo: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    }
 }));
 
 export default function Education() {
     const classes = styles();
     return (
         <Grid container className={classes.background}>
-            <Grid xs={6}>
+            <Grid xs={6} className={classes.logo}>
+                <img src={Berkeley} style={{maxWidth: '50vh'}}/>
+            </Grid>
+            <Grid xs={6} className={classes.content}>
                 <div className={classes.title}>
                     Education
                 </div>
-                <Paper className={classes.subTitle}>
+                <div className={classes.subTitle}>
                     University of California, Berkeley
-                    <Paper className={classes.ssTitle}>
+                    <div className={classes.ssTitle}>
+                    <br/>
                         B.S. in Computer Science, May 2022<br/>
-                        B.A. in Statistics, May 2022<br/>
-                    </Paper>
-                    <Paper className={classes.body}>
-                        UC Berkeley offered me a tremendous diversity of opportunity. 
-                    </Paper>
-                </Paper>
+                        B.A. in Statistics, May 2022
+                    </div>
+                    <br/>
+                    <div className={classes.body}>
+                        I found a vast diversity of opportunities at UC Berkeley. 
+                    </div>
+                </div>
+
+
             </Grid>
-            <Grid xs={6}>
-                <img src={require("../Images/jacobyeung.jpg")} style={{width: '80%'}}/>
-            </Grid>
+
         </Grid>
     )
 }

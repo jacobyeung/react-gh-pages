@@ -19,9 +19,11 @@ function App() {
         </h1>
       </header>
       <About/>
-      <Education/>
-      <Experience/>
-      <Skills/>
+      <div style={{backgroundColor: '#dfdfdf'}}>
+        <Education/>
+        <Experience/>
+        <Skills/>
+      </div>
     </div>
   );
 }
