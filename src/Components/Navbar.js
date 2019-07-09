@@ -1,90 +1,39 @@
-import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-
-const styles = {
-  background: {
-    borderBottom: "0px",
-    background: 'linear-gradient(to bottom, #4881c799,  #6599d8, #4881c7)',
-    fontSize: 20
-  },
-
-}
-
-export default class Navbar extends React.Component {
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 
 
-  render() {
+
+const styles = makeStyles(theme => ({
+    root: {
+        flex: 1,
+    },
+    toolBar: {
+        background: 'linear-gradient(to bottom, #00507399, #4881c799)',
+        justifyContent: 'space-evenly',
+    },
+    button: {
+        fontSize: 20,
+        textTransform: 'capitalize',
+        // fontWeight: 'bold',
+    }
+}));
+
+export default function Navbar() {
+  const classes = styles();
     return (
-      <nav className="nav" id="navbar" style={styles.background}>
-        <div className="nav-content" >
-          <ul className="nav-items">
-            <li className="nav-item" style={{color: 'white'}}>
-              <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <strong>About Me</strong>
-              </Link>
-            </li>
-            <li className="nav-item" style={{color: 'white'}}>
-              <Link
-                activeClass="active"
-                to="section2"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 2
-              </Link>
-            </li>
-            <li className="nav-item" style={{color: 'white'}}>
-              <Link
-                activeClass="active"
-                to="section3"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 3
-              </Link>
-            </li>
-            <li className="nav-item" style={{color: 'white'}}>
-              <Link
-                activeClass="active"
-                to="section4"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 4
-              </Link>
-            </li>
-            <li className="nav-item" style={{color: 'white'}}>
-              <Link
-                activeClass="active"
-                to="section5"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 5
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      <div className={classes.root} >
+        <AppBar position="fixed" className={classes.toolBar}>
+          <Toolbar className={classes.toolBar}>
+            <Button color="inherit" className={classes.button}>Home</Button>
+            <Button color="inherit" className={classes.button}>About</Button>
+            <Button color="inherit" className={classes.button}>Education</Button>
+            <Button color="inherit" className={classes.button}>Experience</Button>
+            <Button color="inherit" className={classes.button}>Skills</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
     );
   }
-}
