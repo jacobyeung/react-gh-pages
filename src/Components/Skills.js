@@ -4,6 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import { Button } from '@material-ui/core';
 import Python from '../Images/python.png'
 import R from '../Images/r.png'
+import ReactJS from '../Images/react.png'
+
+
 const styles = makeStyles(theme => ({
     background: {
         padding: '5vh'
@@ -19,9 +22,8 @@ const styles = makeStyles(theme => ({
     },
     icons: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignContent: 'center'
+        justifyContent: 'space-around',
+
     }
 }))
 
@@ -53,6 +55,9 @@ export default function Skills() {
                 </Button>
                 <Button onClick={() => window.open('https://github.com/jacobyeung/Binomial_Package')}> 
                     <img src={R} className={classes.button}/>
+                </Button>
+                <Button onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
+                    <img src={ReactJS} className={classes.button}/>
                 </Button>
             </Grid>
 
