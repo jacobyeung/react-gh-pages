@@ -23,6 +23,7 @@ function App() {
         <Education/>
         <Experience/>
         <Skills/>
+        
       </div>
     </div>
   );
