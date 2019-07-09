@@ -44,6 +44,8 @@ const styles = makeStyles(theme => ({
 export default function Education() {
     const classes = styles();
     return (
+        <section id='education'>
+
         <Grid container className={classes.background}>
             <Grid xs={12}>
                 <div className={classes.title}>
@@ -77,5 +79,8 @@ export default function Education() {
             </Grid>
 
         </Grid>
+
+        </section>
+
     )
 }
