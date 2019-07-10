@@ -1,19 +1,15 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
-<<<<<<< HEAD:src/Components/Skills/Skills.js
 import { Button } from '@material-ui/core'
 import Python from '../../Images/python.png'
 import R from '../../Images/r.png'
 import ReactJS from '../../Images/react.png'
 import Java from '../../Images/java.png'
-=======
 import { Button } from '@material-ui/core';
 import Python from '../Images/python.png'
 import R from '../Images/r.png'
 import ReactJS from '../Images/react.png'
-
->>>>>>> parent of 6af4f89... added R logo:src/Components/Skills.js
 
 const styles = makeStyles(theme => ({
     background: {
