@@ -11,16 +11,15 @@ const styles = makeStyles(theme =>({
         fontSize: '300%',
     },
     subTitle: {
-        // fontSize: '150%',
+        fontSize: '150%',
 
     },
     background: {
         display: 'flex',
-        // background: '#39393b',
+        background: '#39393b',
         alignContent: 'flex-start',
         justifyContent: 'center',
         textAlign: 'center',
-        // height: '45vh',
         fontWeight: 'normal',
     },
     body: {
@@ -53,7 +52,7 @@ export default function About() {
                      I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
                  </div>
             </Grid>
-            <Grid container spacing={2} style={{margin: '-16px'}}>
+            <Grid container spacing={2} style={{padding: '0px'}}>
 
                 <Grid item xs={6}>
                     <h1 className={classes.subTitle}>

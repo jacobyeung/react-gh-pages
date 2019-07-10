@@ -1,0 +1,39 @@
+[debug] [2019-07-10T00:42:04.472Z] ----------------------------------------------------------------------
+[debug] [2019-07-10T00:42:04.474Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2019-07-10T00:42:04.474Z] CLI Version:   7.0.2
+[debug] [2019-07-10T00:42:04.474Z] Platform:      darwin
+[debug] [2019-07-10T00:42:04.474Z] Node Version:  v12.4.0
+[debug] [2019-07-10T00:42:04.475Z] Time:          Tue Jul 09 2019 17:42:04 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-07-10T00:42:04.475Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-10T00:42:04.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-10T00:42:04.483Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/jacyeung/website/react-gh-pages
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using jacobyeung-1.
+[debug] [2019-07-10T00:42:21.681Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/jacobyeung-1  
+ 
+[debug] [2019-07-10T00:42:21.714Z] Error: getaddrinfo ENOTFOUND firebase.googleapis.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND firebase.googleapis.com
