@@ -2,10 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 import { Button } from '@material-ui/core'
-import Python from '../Images/python.png'
-import R from '../Images/r.png'
-import ReactJS from '../Images/react.png'
-
+import Python from '../../Images/python.png'
+import R from '../../Images/r.png'
+import ReactJS from '../../Images/react.png'
+import Java from '../../Images/java.png'
 
 const styles = makeStyles(theme => ({
     background: {
@@ -47,6 +47,9 @@ export default function Skills() {
                 </Button>
                 <Button onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
                     <img src={ReactJS} className={classes.button}/>
+                </Button>
+                <Button onClick={() => window.open('https://github.com/jacobyeung/Cryptocurrency-Price-Analyzer')}>
+                    <img src={Java} className={classes.button}/>
                 </Button>
             </Grid>
 

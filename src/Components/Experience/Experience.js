@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import Cisco from '../Images/cisco.png'
+import Cisco from '../../Images/cisco.png'
 import Grid from '@material-ui/core/Grid'
-import Davis from '../Images/davis.png'
+import Davis from '../../Images/davis.png'
 const styles = makeStyles(theme => ({
     background: {
         minHeight: '50vh',

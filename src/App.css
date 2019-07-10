@@ -23,3 +23,14 @@
   color: #61dafb;
 }
 
+
+
+.button {
+  align-items: flex-start;
+  display: 'flex';
+  justify-content: flex-start;
+}
+
+.image {
+  height: 10vh;
+}

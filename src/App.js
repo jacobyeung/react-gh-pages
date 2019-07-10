@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar/Navbar'
 import Button from '@material-ui/core/Button'
-import About from './Components/About';
-import Education from './Components/Education'
+import About from './Components/About/About';
+import Education from './Components/Education/Education'
 import './App.css';
-import Experience from './Components/Experience';
-import Skills from './Components/Skills';
+import Experience from './Components/Experience/Experience';
+import Skills from './Components/Skills/Skills';
 import source from './Images/sourcecode.png'
 
 
@@ -22,12 +22,12 @@ function App() {
         </h1>
       </header>
       <About/>
-      <div style={{backgroundColor: '#dfdfdf'}}>
+      <div>
         <Education/>
         <Experience/>
         <Skills/>
-        <Button style={{alignItems: 'flex-start', display: 'flex'}}onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
-          <img src={source} style={{height: '10vh'}}/> <br/>
+        <Button className='button' onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
+          <img src={source} className='image'/> <br/>
           Source Code
         </Button>
       </div>
