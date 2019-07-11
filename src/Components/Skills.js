@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
-import { Button } from '@material-ui/core';
+import { Button } from '@material-ui/core'
 import Python from '../Images/python.png'
 import R from '../Images/r.png'
 import ReactJS from '../Images/react.png'
@@ -27,20 +27,10 @@ const styles = makeStyles(theme => ({
     }
 }))
 
-
-
-
-
-
-
-
-
-
-
-
 export default function Skills() {
     const classes = styles();
     return (
+        <section id='skills'>
         <Grid container className={classes.background}>
             <Grid xs={12}>
                 <div className={classes.title}>
@@ -62,5 +52,7 @@ export default function Skills() {
             </Grid>
 
         </Grid>
+
+        </section>
     )
 }

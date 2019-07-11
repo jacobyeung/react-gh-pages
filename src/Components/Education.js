@@ -44,6 +44,8 @@ const styles = makeStyles(theme => ({
 export default function Education() {
     const classes = styles();
     return (
+        <section id='education'>
+
         <Grid container className={classes.background}>
             <Grid xs={12}>
                 <div className={classes.title}>
@@ -57,17 +59,17 @@ export default function Education() {
             </Grid>
             <Grid xs={6} className={classes.content}>
                 <div className={classes.subTitle}>
-                    <h2 style={{fontWeight: 'normal'}}>
+                    <h3 style={{fontWeight: 'normal'}}>
                         University of California, Berkeley
-                    </h2>
+                    </h3>
                     <div className={classes.ssTitle}>
-                        <h3 style={{fontWeight: 'normal'}}>
+                        <h4 style={{fontWeight: 'normal'}}>
                             B.S. in Computer Science, May 2022<br/>
                             B.A. in Statistics, May 2022
-                        </h3>
-                        <div>
+                        </h4>
+                        <h5 style={{fontWeight: 'normal'}}>
                             I found a vast diversity of opportunities at UC Berkeley. 
-                        </div>
+                        </h5>
                     </div>
 
 
@@ -77,5 +79,8 @@ export default function Education() {
             </Grid>
 
         </Grid>
+
+        </section>
+
     )
 }
