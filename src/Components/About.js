@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Download from '@axetroy/react-download';
 import Button from '@material-ui/core/Button';
-
+import resume from './resume/resume.pdf'
+import source from '../Images/sourcecode.png'
 
 
 const styles = makeStyles(theme =>({
@@ -19,8 +20,9 @@ const styles = makeStyles(theme =>({
         background: '#39393b',
         alignContent: 'flex-start',
         justifyContent: 'center',
-        textAlign: 'center',
+        textAlign: '-webkit-center',
         fontWeight: 'normal',
+        color: '#D3D3D3'
     },
     body: {
 
@@ -52,7 +54,7 @@ export default function About() {
                      I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
                  </div>
             </Grid>
-            <Grid container spacing={2} style={{padding: '0px'}}>
+            <Grid container spacing={0} style={{paddingBottom: '5vh'}}>
 
                 <Grid item xs={6}>
                     <h1 className={classes.subTitle}>
@@ -67,11 +69,12 @@ export default function About() {
                 </Grid>
                 <Grid item xs={6}>
                     <h1 className={classes.subTitle}>
-                        <Download file="./resume/resume.pdf" content="">
-                            <Button className={classes.button}>
-                                Download Resume
-                            </Button>
-                        </Download>
+                        <Button style={{alignItems: 'center', justifyContent: 'center', display: 'flex', color: '#DFDFDF'}}onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
+                            <img src={source} style={{height: '10vh', filter: 'invert(100%)'}}/>
+                            <div>
+                                Source Code
+                            </div>
+                        </Button>
                     </h1>
                 </Grid>
 

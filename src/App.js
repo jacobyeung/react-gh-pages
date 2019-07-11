@@ -6,7 +6,6 @@ import Education from './Components/Education'
 import './App.css';
 import Experience from './Components/Experience';
 import Skills from './Components/Skills';
-import source from './Images/sourcecode.png'
 
 
 function App() {
@@ -26,10 +25,7 @@ function App() {
         <Education/>
         <Experience/>
         <Skills/>
-        <Button style={{alignItems: 'flex-start', display: 'flex'}}onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
-          <img src={source} style={{height: '10vh'}}/> <br/>
-          Source Code
-        </Button>
+
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import {Link, animateScroll as scroll} from 'react-scroll'
+import {Link} from 'react-scroll'
 
 
 const styles = makeStyles(theme => ({
@@ -15,7 +15,7 @@ const styles = makeStyles(theme => ({
         justifyContent: 'space-evenly',
     },
     button: {
-        fontSize: 20,
+        // fontSize: 20,
         textTransform: 'capitalize',
         // fontWeight: 'bold',
     }
