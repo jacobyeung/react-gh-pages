@@ -1,42 +1,23 @@
 .title {
-    flex: 1;
-    font-size: '5vh';
-    text-align: 'left';
-    padding-top: '5vh';
-    padding-left: '5vh';
-    color: 'white';
-    background-color: 'transparent'
+    font-size: '300%';
 }
-
 .subTitle {
-    flex: 1;
-    font-size: '4vh';
-    text-align: 'left';
-    padding: '5vh';
-    background-color: 'transparent';
-    color: 'white'
+    font-size: '150%';
 
 }
-
 .background {
-    background: '#39393b';
-    min-height: '50vh';
-
+    display: 'flex';
+    background: #39393b;
+    align-content: 'flex-start';
+    justify-content: 'center';
+    text-align: '-webkit-center';
+    font-weight: 'normal';
+    color: #D3D3D3
 }
 
-body {
-    flex: 1;
-    font-size: '3vh';
-    color: #c6c7ca;
-    text-align: 'left';
-    padding: '5vh'
-
-}
-
-button {
+.button {
     background-color: 'grey';
     color: 'white';
     text-transform: 'capitalize';
 
 }
-
