@@ -6,10 +6,7 @@ import Python from '../../Images/python.png'
 import R from '../../Images/r.png'
 import ReactJS from '../../Images/react.png'
 import Java from '../../Images/java.png'
-import { Button } from '@material-ui/core';
-import Python from '../Images/python.png'
-import R from '../Images/r.png'
-import ReactJS from '../Images/react.png'
+
 
 const styles = makeStyles(theme => ({
     background: {

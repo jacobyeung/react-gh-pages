@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Download from '@axetroy/react-download';
 import Button from '@material-ui/core/Button';
-import resume from './resume/resume.pdf'
-import source from '../Images/sourcecode.png'
+import resume from '../resume/resume.pdf'
+import source from '../../Images/sourcecode.png'
 
 
 const styles = makeStyles(theme =>({
