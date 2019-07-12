@@ -47,6 +47,8 @@ const styles = makeStyles(theme => ({
 export default function Experience() {
     const classes = styles();
     return (
+        <section id='experiences'>
+
         <Grid container className={classes.background} style={{borderBottomColor: 'black'}}>
             <Grid xs={12}>
                 <div className={classes.title}>
@@ -99,6 +101,8 @@ export default function Experience() {
 
 
         </Grid>
+
+        </section>
 
     )
 }

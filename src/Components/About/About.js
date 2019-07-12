@@ -1,42 +1,31 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Download from '@axetroy/react-download';
 import Button from '@material-ui/core/Button';
-
+import resume from './resume/resume.pdf'
+import source from '../Images/sourcecode.png'
 
 
 const styles = makeStyles(theme =>({
     title: {
-        flex: 1,
-        fontSize: '5vh',
-        textAlign: 'left',
-        paddingTop: '5vh',
-        paddingLeft: '5vh',
-        color: 'white',
-        backgroundColor: 'transparent'
+        fontSize: '300%',
     },
     subTitle: {
-        flex: 1,
-        fontSize: '4vh',
-        textAlign: 'left',
-        padding: '5vh',
-        backgroundColor: 'transparent',
-        color: 'white'
+        fontSize: '150%',
 
     },
     background: {
+        display: 'flex',
         background: '#39393b',
-        minHeight: '50vh',
-
+        alignContent: 'flex-start',
+        justifyContent: 'center',
+        textAlign: '-webkit-center',
+        fontWeight: 'normal',
+        color: '#D3D3D3'
     },
     body: {
-        flex: 1,
-        fontSize: '3vh',
-        color: '#c6c7ca',
-        textAlign: 'left',
-         padding: '5vh'
+
 
     },
     button: {
@@ -53,40 +42,46 @@ export default function About() {
 
     return (
 
+        <section id='about'>
 
         <Grid container className={classes.background}>
-            <Grid item xs={12} >
-                <Paper className={classes.title} style={{boxShadow: 'none'}}>
-                    About Me
+            <Grid item xs={12} >                    
+                    <h1 className={classes.title}>
+                        About Me
+                    </h1>
+                 
                  <div className={classes.body}>
                      I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
                  </div>
-                </Paper>
             </Grid>
-            <Grid container spacing={2} style={{margin: '-16px'}}>
+            <Grid container spacing={0} style={{paddingBottom: '5vh'}}>
 
                 <Grid item xs={6}>
-                    <Paper className={classes.subTitle} style={{boxShadow: 'none'}}>
+                    <h1 className={classes.subTitle}>
                         Contact Details
-                            <div id='details' className={classes.body}>
+
+                    </h1>
+                    <div id='details' className={classes.body}>
                                 Jacob Yeung<br/>
                                 (510)-676-4096<br/>
                                 jacobyeung01@gmail.com<br/>
-                            </div>
-                    </Paper>
+                    </div>
                 </Grid>
                 <Grid item xs={6}>
-                    <Paper className={classes.subTitle} style={{boxShadow: 'none'}}>
-                        <Download file="./resume/resume.pdf" content="">
-                            <Button className={classes.button}>
-                                Download Resume
-                            </Button>
-                        </Download>
-                    </Paper>
+                    <h1 className={classes.subTitle}>
+                        <Button style={{alignItems: 'center', justifyContent: 'center', display: 'flex', color: '#DFDFDF'}}onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
+                            <img src={source} style={{height: '10vh', filter: 'invert(100%)'}}/>
+                            <div>
+                                Source Code
+                            </div>
+                        </Button>
+                    </h1>
                 </Grid>
 
             </Grid>
             
         </Grid>
+
+        </section>
     );
 }
