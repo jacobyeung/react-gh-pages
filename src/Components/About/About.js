@@ -38,11 +38,12 @@ export default function About() {
             <div className='column2About'>
                 <button className='buttonAbout' onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
                     <img src={source} className='buttonIconAbout'/>
-                    <div>
-                        Source Code
+                    <div className='rowAbout'>
+                        Website Source Code
                     </div>
                 </button>
             </div>
+
 
             
             

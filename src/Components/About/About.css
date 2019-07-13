@@ -13,6 +13,7 @@
     justify-content: center;
     justify-items: center;
     flex-direction: row;
+    color: #D3D3D3;
 
 }
 
@@ -23,15 +24,16 @@
     align-items: center;
     justify-content: space-around;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 .column2About {
     display: flex;
     flex-direction: column;
     flex: 1 0 50%;
     align-items: center;
+    justify-content: center;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .backgroundAbout {
@@ -49,8 +51,10 @@
     border-width: 0;
     cursor: pointer;
 }
-
+.buttonAbout:hover {
+    background-color: rgb(53, 53, 53)	
+}
 .buttonIconAbout {
     height: 10vh;
-    filter: invert(100%);
+    filter: invert(80%);
 }

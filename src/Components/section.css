@@ -1,16 +1,26 @@
 .title {
     font-size: 300%;
 }
-.subTitle {
-    font-size: 150%;
+.rowTitle {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+}
 
+.subTitle {
+    justify-content: flex-start;
+    margin-block-start: 0px;
+    width: 100%;
 }
 
 .row {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     justify-items: center;
     flex-direction: row;
 }
@@ -19,7 +29,7 @@
     flex-direction: column;
     flex: 1 0 50%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -42,7 +52,8 @@
     background: #dfdfdf;
     flex-wrap: wrap;
     flex-direction: row;
-
+    width: 100%;
+    justify-content: space-evenly;
 }
 .body {
     display: flex;
@@ -50,15 +61,36 @@
     text-align: flex-start;
     width: 100%;
 }
-.button {
-    background-color: grey;
-    color: white;
-    text-transform: capitalize;
+.icon {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border-width: 0px;
+    cursor: pointer;
 }
-
+.icon:hover {
+    background-color: #D3D3D3;
+}
 .logo {
     display: flex;
     border-radius: 10%;
-    width: 25vh;
+    width: 34vh;
+    /* height: 100%; */
+    margin: 15px;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+.buttons {
+    height: 10vh;
+}
+.iconText {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

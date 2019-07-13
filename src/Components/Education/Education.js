@@ -5,11 +5,11 @@ import '../section.css'
 
 export default function Education() {
     return (
-        <section id='about'>
+        <section id='education'>
 
         <div container className='row'>
             <div className='background'>
-            <div className='row'>
+            <div className='rowTitle'>
                 <h1 className='title'>
                     Education
                 </h1>
@@ -23,13 +23,13 @@ export default function Education() {
                         University of California, Berkeley
                     </h2>
                 </div>
-                <div className='ssTitle'>
-                    <b>B.S. in Computer Science, May 2022</b>
-                </div>
-                <div className='ssTitle'>
-                    <b>B.A. in Statistics, May 2022</b>
-                </div>
-                <div className='body'>
+                <h3 className='subTitle'>
+                    B.S. in Computer Science, May 2022
+                </h3>
+                <h3 className='subTitle'>
+                    B.A. in Statistics, May 2022
+                </h3>
+                <div className='row'>
                     I found a vast diversity of opportunities at UC Berkeley. 
                 </div>
             </div>
