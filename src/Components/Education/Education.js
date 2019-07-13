@@ -1,84 +1,44 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
 import Berkeley from '../../Images/berkeley.png';
-const styles = makeStyles(theme => ({
-    background: {
-        padding: '5vh',
-    },    
-    logo: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        paddingBottom: '5vh'
-    },
-    content: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyItems: 'center',
-        alignItems: 'flex-start',
-        paddingBottom: '5vh',
-    },
-    title: {
-        display: 'flex',
-        // flex: 0.5,
-        // fontSize: '5vh',
-        alignItems: 'center',
-        // height: '10vh',
-        justifyContent: 'center',
+import '../section.css'
 
-
-    },
-    ssTitle:{
-        paddingLeft: '5vh',
-        paddingBottom: '5vh',
-        flex: 1,
-        // fontSize: '2.5vh'
-    },
-    subTitle: {
-        flex: 1,
-        // fontSize: '4vh',
-        paddingLeft: '5vh',
-    },
-}));
 export default function Education() {
-    const classes = styles();
     return (
-        <section id='education'>
+        <section id='about'>
 
-        <Grid container className={classes.background}>
-            <Grid xs={12}>
-                <div className={classes.title}>
-                    <h1 style={{fontWeight: 'normal'}}>
-                        Education
-                    </h1>
-                </div>
-            </Grid>
-            <Grid xs={6} className={classes.logo}>
-                <img src={Berkeley} style={{maxWidth: '50%', borderRadius: '10%'}}/>
-            </Grid>
-            <Grid xs={6} className={classes.content}>
-                <div className={classes.subTitle}>
-                    <h3 style={{fontWeight: 'normal'}}>
+        <div container className='row'>
+            <div className='background'>
+            <div className='row'>
+                <h1 className='title'>
+                    Education
+                </h1>
+            </div> 
+            <div className='column1'>
+                <img src={Berkeley} className='logo'/>
+            </div>
+            <div className='column2'>
+                <div className='row'>
+                    <h2 className='subTitle'>
                         University of California, Berkeley
-                    </h3>
-                    <div className={classes.ssTitle}>
-                        <h4 style={{fontWeight: 'normal'}}>
-                            B.S. in Computer Science, May 2022<br/>
-                            B.A. in Statistics, May 2022
-                        </h4>
-                        <h5 style={{fontWeight: 'normal'}}>
-                            I found a vast diversity of opportunities at UC Berkeley. 
-                        </h5>
-                    </div>
-
-
+                    </h2>
                 </div>
+                <div className='ssTitle'>
+                    <b>B.S. in Computer Science, May 2022</b>
+                </div>
+                <div className='ssTitle'>
+                    <b>B.A. in Statistics, May 2022</b>
+                </div>
+                <div className='body'>
+                    I found a vast diversity of opportunities at UC Berkeley. 
+                </div>
+            </div>
+
+            </div>
+            
 
 
-            </Grid>
-
-        </Grid>
+         </div>
 
         </section>
 

@@ -1,37 +1,64 @@
 .title {
-    flex: 1;
-    font-size: '5vh';
-    text-align: 'left';
-    padding-top: '5vh';
-    padding-left: '5vh';
-    color: 'white';
-    background-color: 'transparent'
+    font-size: 300%;
 }
 .subTitle {
-    flex: 1;
-    font-size: '4vh';
-    text-align: 'left';
-    padding: '5vh';
-    background-color: 'transparent';
-    color: 'white'
+    font-size: 150%;
 
 }
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+}
+.column1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.column2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.ssTitle {
+    display: flex;
+    align-content: flex-start;
+    width: 100%
+}
 .background {
-    background: '#39393b';
-    min-height: '50vh';
+    display: flex;
+    height: fit-content;
+    background: #dfdfdf;
+    flex-wrap: wrap;
+    flex-direction: row;
 
 }
 .body {
-    flex: 1;
-    font-size: '3vh';
-    color: '#c6c7ca';
-    text-align: 'left';
-    padding: '5vh'
-
+    display: flex;
+    color: black;
+    text-align: flex-start;
+    width: 100%;
 }
 .button {
-    background-color: 'grey';
-    color: 'white';
-    text-transform: 'capitalize';
-
+    background-color: grey;
+    color: white;
+    text-transform: capitalize;
 }
+
+.logo {
+    display: flex;
+    border-radius: 10%;
+    width: 25vh;
+}
+

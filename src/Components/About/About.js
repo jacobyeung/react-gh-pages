@@ -1,7 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import source from '../../Images/sourcecode.png'
 import './About.css'
 
@@ -12,43 +9,44 @@ export default function About() {
 
         <section id='about'>
 
-        <Grid container className='background'>
-            <Grid item xs={12}>                    
-                    <h1 className='title'>
-                        About Me
-                    </h1>
-                 
-                 <div>
-                     I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
-                 </div>
-            </Grid>
-            <Grid container spacing={0} style={{paddingBottom: '5vh'}}>
-
-                <Grid item xs={6}>
-                    <h1 className='subTitle'>
+        <div className='backgroundAbout'>
+            <div className='rowAbout'>                    
+                <h1 className='titleAbout'>
+                    About Me
+                </h1>
+            </div>
+            <div className='rowAbout'>
+                I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
+            </div>
+            <div className='column1About'>
+                <div className='rowAbout'>
+                    <h2 className='subTitleAbout'>
                         Contact Details
+                    </h2>
+                </div>
 
-                    </h1>
-                    <div id='details'>
-                                Jacob Yeung<br/>
-                                (510)-676-4096<br/>
-                                jacobyeung01@gmail.com<br/>
+                <div className='rowAbout'>
+                    Jacob Yeung
+                <div className='rowAbout'>
+                    (510)-676-4096
+                </div>   
+                <div classname='rowAbout'>
+                    jacobyeung01@gmail.com
+                </div> 
+                </div>
+            </div>
+            <div className='column2About'>
+                <button className='buttonAbout' onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
+                    <img src={source} className='buttonIconAbout'/>
+                    <div>
+                        Source Code
                     </div>
-                </Grid>
-                <Grid item xs={6}>
-                    <h1 className='subTitle'>
-                        <Button style={{alignItems: 'center', justifyContent: 'center', display: 'flex', color: '#DFDFDF'}}onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
-                            <img src={source} style={{height: '10vh', filter: 'invert(100%)'}}/>
-                            <div>
-                                Source Code
-                            </div>
-                        </Button>
-                    </h1>
-                </Grid>
+                </button>
+            </div>
 
-            </Grid>
             
-        </Grid>
+            
+        </div>
 
         </section>
     );

@@ -21,11 +21,9 @@ function App() {
         </h1>
       </header>
       <About/>
-      <div>
-        <Education/>
-        <Experience/>
-        <Skills/>
-      </div>
+      <Education/>
+      <Experience/>
+      <Skills/>
     </div>
   );
 }
