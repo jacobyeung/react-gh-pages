@@ -1,42 +1,60 @@
-.title {
-    flex: 1;
-    font-size: '5vh';
-    text-align: 'left';
-    padding-top: '5vh';
-    padding-left: '5vh';
-    color: 'white';
-    background-color: 'transparent'
+.titleAbout {
+    font-size: 300%;
 }
-
-.subTitle {
-    flex: 1;
-    font-size: '4vh';
-    text-align: 'left';
-    padding: '5vh';
-    background-color: 'transparent';
-    color: 'white'
+.subTitleAbout {
+    font-size: 150%;
 
 }
 
-.background {
-    background: '#39393b';
-    min-height: '50vh';
+.rowAbout {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    color: #D3D3D3;
 
 }
 
-body {
-    flex: 1;
-    font-size: '3vh';
-    color: #c6c7ca;
-    text-align: 'left';
-    padding: '5vh'
-
+.column1About {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.column2About {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
 }
 
-button {
-    background-color: 'grey';
-    color: 'white';
-    text-transform: 'capitalize';
+.backgroundAbout {
+    background: #39393b;
+    color: #D3D3D3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
 
+.buttonAbout {
+    background-color: inherit;
+    color: white;
+    text-transform: capitalize;
+    border-width: 0;
+    cursor: pointer;
 }
-
+.buttonAbout:hover {
+    background-color: rgb(53, 53, 53)	
+}
+.buttonIconAbout {
+    height: 10vh;
+    filter: invert(80%);
+}
