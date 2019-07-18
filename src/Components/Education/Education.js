@@ -30,7 +30,8 @@ export default function Education() {
                     B.A. in Statistics, May 2022
                 </h3>
                 <div className='row'>
-                    I found a vast diversity of opportunities at UC Berkeley. 
+                    I found a vast diversity of opportunities at UC Berkeley. As a mentor in the Undergraduate Laboratory at Berkeley, I designed and led a team of undergraduates on creating a comprehensive summary of research done in reconstructing images through statistical analysis and MVPA (Multi-Voxel Pattern Analysis) of fMRI data. I furthered my interest in brain wave analysis by helping a graduate student analyze quantitative susceptibility mapping data of different brain regions with PET scans of β-amyloid and tau
+                    proteins to develop a cheaper alternative to identifying Alzheimer’s disease 
                 </div>
             </div>
 
