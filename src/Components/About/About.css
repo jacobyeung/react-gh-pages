@@ -10,31 +10,23 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
+    justify-content: space-around;
+    justify-items: space-between;
     flex-direction: row;
     color: #D3D3D3;
 
 }
 
-.column1About {
+.columnAbout {
     display: flex;
     flex-direction: column;
-    flex: 1 0 50%;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 15px;
-    padding-bottom: 30px;
-}
-.column2About {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 50%;
-    align-items: center;
+    /* flex: 1 0 50%; */
+    align-content: space-between;
     justify-content: center;
     padding-top: 15px;
     padding-bottom: 30px;
 }
+
 
 .backgroundAbout {
     background: #39393b;
@@ -57,4 +49,42 @@
 .buttonIconAbout {
     height: 10vh;
     filter: invert(80%);
+}
+.formCol {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding-bottom: 16px
+}
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.inputBox {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    padding: 4px 0px;
+    background: #d3d3d3
+}
+.inputBoxContent {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    padding: 0px 0px 100px 0px;
+    background: #d3d3d3
+}
+.fillerDiv{
+    width: auto;
+}
+.submitButton {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border-color: transparent;
+    color: white !important;
+    background-color: #6CC04A;
+    cursor: pointer;
+    justify-self: flex-end;
 }
