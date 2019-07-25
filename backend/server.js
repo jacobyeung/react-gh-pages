@@ -96,7 +96,7 @@ app.post('/contact', function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
+    port: 587,
     secure: true,
     auth: {
       user: 'hohorocks@gmail.com',
@@ -104,7 +104,6 @@ app.post('/contact', function (req, res) {
 
     }
   });
-  console.log('hi')
   mailOpts = {
     from: req.body.Email,
     to: 'hohorocks@gmail.com',
@@ -114,6 +113,7 @@ app.post('/contact', function (req, res) {
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
       res.render('contact-failure');
+      console.log(response)
     }
     else {
       res.render('contact-success');
