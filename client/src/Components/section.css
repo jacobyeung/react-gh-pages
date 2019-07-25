@@ -23,7 +23,7 @@
     justify-content: flex-start;
     justify-items: center;
     flex-direction: row;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 .column1 {
     display: flex;
