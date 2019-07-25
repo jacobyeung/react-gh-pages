@@ -2,16 +2,58 @@ import React from 'react';
 import source from '../../Images/sourcecode.png'
 import './About.css'
 import axios from 'axios'
+<<<<<<< HEAD
 import Email from './Email'
 
+=======
+>>>>>>> efa3046d4379389a2a8ca7732647efeb247bd7b6
 
 var api_key = 'a2921914d0fd2003a207f7a363392d78-c50f4a19-ba453e59';
 var domain = 'https://api.mailgun.net/v3/jacobyeung.org';
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+<<<<<<< HEAD
 
 
 class About extends React.Component {
 
+=======
+ 
+var data = {
+  from: 'Excited User <me@samples.mailgun.org>',
+  to: 'serobnic@mail.ru',
+  subject: 'Hello',
+  text: 'Testing some Mailgun awesomeness!'
+};
+
+mailgun.messages().send(data, function (error, body) {
+  console.log(body);
+});
+
+class About extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            Title: '',
+            Email: '',
+            Content: '',
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.changeHandler = this.changeHandler.bind(this)
+    }
+
+    handleSubmit = function(event) {
+        event.preventDefault()
+        //Write send email function here
+        this.setState({
+            Title: '',
+            Email: '',
+            Content: '',
+        })
+    }
+    changeHandler (event) {
+        this.setState({[event.target.name]: event.target.value})
+    }
+>>>>>>> efa3046d4379389a2a8ca7732647efeb247bd7b6
     render() {
 
         return (
@@ -59,7 +101,54 @@ class About extends React.Component {
                                     Suggestions
                                 </h2>
                             </div>
+<<<<<<< HEAD
                             <Email/>
+=======
+                            
+                            <form className='rowAbout' onSubmit={this.handleSubmit} method='POST'>
+                                <div className='formCol'>
+                                    <div className='formTitle'>Title</div>
+                                    <input
+                                    type='Title'
+                                    name='Title'
+                                    value={this.state.Title}
+                                    onChange={this.changeHandler}
+                                    className='inputBox'
+                                    placeholder='Enter your title here'
+                                    required/>
+                                </div>
+                                <div className='formCol'>
+                                    <div className='formTitle'>Email</div>
+                                    <input
+                                    type='Email'
+                                    name='Email'
+                                    value={this.state.Email}
+                                    onChange={this.changeHandler}
+                                    className='inputBox'
+                                    placeholder="Optional, without email I can't respond"/>
+                                </div>
+                                <div className='formCol'>
+                                    <div>Content</div>
+                                    <input
+                                    type='Content'
+                                    name='Content'
+                                    value={this.state.Content}
+                                    onChange={this.changeHandler}
+                                    className='inputBoxContent'
+                                    placeholder='Enter your feedback here'
+                                    required/>
+                                </div>
+                                <div className='formRow'>
+                                    <div className='fillerDiv'></div>
+                                    <button
+                                    className='submitButton'
+                                    type='submit'>
+                                        Send Email
+                                    </button>
+                                </div>
+
+                            </form>
+>>>>>>> efa3046d4379389a2a8ca7732647efeb247bd7b6
                         </div>
                     </div>
                     
