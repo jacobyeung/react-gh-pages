@@ -36,20 +36,6 @@
     flex-wrap: wrap;
 } 
 
-.buttonAbout {
-    background-color: inherit;
-    color: white;
-    text-transform: capitalize;
-    border-width: 0;
-    cursor: pointer;
-}
-.buttonAbout:hover {
-    background-color: rgb(53, 53, 53)	
-}
-.buttonIconAbout {
-    height: 10vh;
-    filter: invert(80%);
-}
 .formCol {
     width: 100%;
     display: flex;
