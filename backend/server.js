@@ -5,7 +5,7 @@ var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const Data = require('./data');
-
+const fetch = require('node-fetch')
 const API_PORT = 3001;
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -120,3 +120,44 @@ app.post('/contact', function (req, res) {
     }
   });
 });
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const emailBody =
+{
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "hohorocks@gmail.com"
+        }
+      ],
+      "subject": "Hello, World!"
+    }
+  ],
+  "from": {
+    "email": "jacobyeung01@gmail.com"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hello, World!"
+    }
+  ]
+}
+
+console.log('Bearer ' + process.env.SENDGRID_API_KEY)
+var emailOptions = {
+  'method': 'POST',
+  'headers': {
+    'Authorization': 'Bearer ' + process.env.SENDGRID_API_KEY,
+    'Content-Type': 'application/json'
+  },
+  'body': JSON.stringify(emailBody),
+}
+fetch('https://api.sendgrid.com/v3/mail/send', emailOptions)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch((error) => {
+    console.log('error', error)
+  })
