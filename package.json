@@ -14,10 +14,12 @@
   "devDependencies": {},
   "scripts": {
     "start": "npm run index.js",
-    "server": "node backend/server.js",
+    "server": "npx nodemon backend/index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npx nodemon backend/server.js\" \"npm run client\"",
-    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+
   },
   "repository": {
     "type": "git",
