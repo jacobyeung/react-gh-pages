@@ -8,10 +8,11 @@ const fetch = require('node-fetch')
 const API_PORT = 3001;
 const app = express();
 const sgMail = require('@sendgrid/mail');
-
+const path = require('path')
 app.use(cors());
 const router = express.Router();
 
+app.use(express.static(path.join(__dirname, 'client/build')))
 // this is our MongoDB database
 const dbRoute = process.env.DB_ROUTE
 // connects our back end code with the database
