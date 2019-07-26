@@ -23,7 +23,8 @@ app.get("/api/message", async (req, res, next) => {
 
 app.use(express.static(path.join(__dirname, '../client/build')))
 
-
+// append /api for our http requests
+app.use('/api', router);
 
 // this is our MongoDB database
 const dbRoute = "mongodb+srv://hohorocks:hoho010201@jacobyeung-org-vxsz1.mongodb.net/test?retryWrites=true&w=majority"
@@ -93,8 +94,7 @@ router.post('/putData', (req, res) => {
   });
 });
 
-// append /api for our http requests
-app.use('/api', router);
+
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`))
