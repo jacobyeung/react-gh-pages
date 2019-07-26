@@ -12,8 +12,6 @@ const path = require('path')
 app.use(cors());
 const router = express.Router();
 
-app.use(express.static(path.join(__dirname, '../client/build')))
-
 app.get("/api/message", async (req, res, next) => {
   try {
     res.status(201).json({ message: "HELLOOOOO FROM EXPRESS" });
@@ -21,6 +19,10 @@ app.get("/api/message", async (req, res, next) => {
     next(err);
   }
 });
+
+
+app.use(express.static(path.join(__dirname, '../client/build')))
+
 
 
 // this is our MongoDB database

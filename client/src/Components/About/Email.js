@@ -48,6 +48,7 @@ class Email extends React.Component {
       const res = await fetch(`/api/message`);
       const { message } = await res.json();
       this.setState({ message });
+      console.log('hi')
     } catch (err) {
       console.error(err);
     }
