@@ -8,14 +8,16 @@
     "concurrently": "^4.1.1",
     "express": "^4.17.1",
     "nodemailer": "^6.3.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "react-scripts": "^3.0.1"
   },
   "devDependencies": {},
   "scripts": {
     "start": "npm run index.js",
     "server": "node backend/server.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npx nodemon backend/server.js\" \"npm run client\"",
+    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build"
   },
   "repository": {
     "type": "git",
