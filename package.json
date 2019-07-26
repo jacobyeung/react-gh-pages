@@ -13,10 +13,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm run index.js",
     "server": "npx nodemon backend/index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
 

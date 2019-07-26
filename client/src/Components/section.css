@@ -41,7 +41,7 @@
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-left: 20px
+    /* margin-left: 20px */
 }
 .ssTitle {
     display: flex;
@@ -86,6 +86,7 @@
     justify-content: space-evenly;
     width: 100%;
     margin-bottom: 10vh;
+    flex-wrap: inherit
 }
 
 .buttons {
