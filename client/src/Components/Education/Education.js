@@ -7,8 +7,7 @@ export default function Education() {
     return (
         <section id='education'>
 
-        <div container className='row'>
-            <div className='background'>
+        <div container className='background'>
             <div className='rowTitle'>
                 <h1 className='title'>
                     Education
@@ -35,7 +34,6 @@ export default function Education() {
                 </div>
             </div>
 
-            </div>
             
 
 

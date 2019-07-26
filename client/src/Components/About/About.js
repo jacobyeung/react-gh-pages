@@ -22,7 +22,7 @@ class About extends React.Component {
                             About Me
                         </h1>
                     </div>
-                    <div className='rowAbout'>
+                    <div className='rowAboutInfo'>
                         I am a full stack developer interested in statistics, quantitative trading/research, data analysis, and machine learning. 
                     </div>
                     <div className='rowAbout'>

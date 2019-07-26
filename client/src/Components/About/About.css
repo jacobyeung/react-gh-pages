@@ -14,10 +14,17 @@
     justify-items: space-between;
     flex-direction: row;
     color: #D3D3D3;
-    margin-left: 10px;
-
 }
-
+.rowAboutInfo {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: space-between;
+    flex-direction: row;
+    color: #D3D3D3;
+    margin-left: 10px;
+}
 .columnAbout {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
 const express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
@@ -9,14 +8,13 @@ const fetch = require('node-fetch')
 const API_PORT = 3001;
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
+const sgMail = require('@sendgrid/mail');
 
 app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const dbRoute =
-  'mongodb+srv://hohorocks:hoho010201@jacobyeung-org-vxsz1.mongodb.net/test?retryWrites=true&w=majority';
-
+const dbRoute = process.env.DB_ROUTE
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 
@@ -90,74 +88,46 @@ app.use('/api', router);
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`))
 
 
+app.post('/send', (req, res) => {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const emailBody =
+  {
+    "personalizations": [
+      {
+        "to": [
+          {
+            "email": "hohorocks@gmail.com"
+          }
+        ]
+      }
+    ],
+    "subject": "Hello, World!",
 
-// POST route from contact form
-app.post('/contact', function (req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: true,
-    auth: {
-      user: 'hohorocks@gmail.com',
-      pass: 'btcmjemuyqyoftoj'
+    "from": {
+      "email": "jacobyeung01@gmail.com"
+    },
+    "content": [
+      {
+        "type": "text/plain",
+        "value": "Hello, World!"
+      }
+    ]
+  }
 
-    }
-  });
-  mailOpts = {
-    from: req.body.Email,
-    to: 'hohorocks@gmail.com',
-    subject: `${req.body.Title}`,
-    text: `${req.body.Title} (${req.body.Email}) says: ${req.body.Content}`
-  };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      res.render('contact-failure');
-      console.log(response)
-    }
-    else {
-      res.render('contact-success');
-    }
-  });
-});
-
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const emailBody =
-{
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "hohorocks@gmail.com"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "jacobyeung01@gmail.com"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "Hello, World!"
-    }
-  ]
-}
-
-console.log('Bearer ' + process.env.SENDGRID_API_KEY)
-var emailOptions = {
-  'method': 'POST',
-  'headers': {
-    'Authorization': 'Bearer ' + process.env.SENDGRID_API_KEY,
-    'Content-Type': 'application/json'
-  },
-  'body': JSON.stringify(emailBody),
-}
-fetch('https://api.sendgrid.com/v3/mail/send', emailOptions)
-  .then(res => res.json())
-  .then(json => console.log(json))
-  .catch((error) => {
-    console.log('error', error)
+  console.log('Bearer ' + process.env.SENDGRID_API_KEY)
+  var emailOptions = {
+    'method': 'POST',
+    'headers': {
+      'Authorization': 'Bearer ' + process.env.SENDGRID_API_KEY,
+      'Content-Type': 'application/json'
+    },
+    'body': JSON.stringify(emailBody),
+  }
+  fetch('https://api.sendgrid.com/v3/mail/send', emailOptions)
+    .then(res => res.json())
+    .then(json => console.log(json))
+    .catch((error) => {
+      console.log('error', error)
   })
+
+})

@@ -47,11 +47,12 @@ class Email extends React.Component {
   handleSubmit = function(event) {
     event.preventDefault()
     const { Title, Email, Content } = this.state
-    const form = axios.post('/api/form', {
+    axios.post('/send', {
       Title,
       Email,
       Content
     })
+    
     this.setState({
         Title: '',
         Email: '',

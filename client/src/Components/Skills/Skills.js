@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
 import Python from '../../Images/python.png'
 import R from '../../Images/r.png'
-import ReactJS from '../../Images/react.png'
+import MERN from '../../Images/mern.png'
 import Java from '../../Images/java.png'
 
 export default function Skills() {
@@ -24,8 +23,8 @@ export default function Skills() {
                     <div className='iconText'>R</div>
                 </button>
                 <button className='icon' onClick={() => window.open('https://github.com/jacobyeung/react-gh-pages')}>
-                    <img src={ReactJS} className='buttons'/>
-                    <div className='iconText'>ReactJS</div>
+                    <img src={MERN} className='buttons'/>
+                    <div className='iconText'>MERN Stack</div>
                 </button>
                 <button className='icon' onClick={() => window.open('https://github.com/jacobyeung/Cryptocurrency-Price-Analyzer')}>
                     <img src={Java} className='buttons'/>
