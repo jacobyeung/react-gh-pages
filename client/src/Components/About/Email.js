@@ -41,18 +41,6 @@ class Email extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
   }
-  componentDidMount = () => this.fetchAPIMessage()
-
-  fetchAPIMessage = async () => {
-    try {
-      const res = await fetch(`/api/message`);
-      const { message } = await res.json();
-      this.setState({ message });
-      console.log('hi')
-    } catch (err) {
-      console.error(err);
-    }
-  };
   handleSubmit = function(event) {
     event.preventDefault()
     const { Title, Email, Content } = this.state

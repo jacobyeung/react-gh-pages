@@ -12,16 +12,10 @@ const path = require('path')
 app.use(cors());
 const router = express.Router();
 
-app.get("/api/message", async (req, res, next) => {
-  try {
-    res.status(201).json({ message: "HELLOOOOO FROM EXPRESS" });
-  } catch (err) {
-    next(err);
-  }
-});
-
-
-app.use(express.static(path.join(__dirname, '../client/build')))
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // append /api for our http requests
 app.use('/api', router);
@@ -101,7 +95,6 @@ app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`))
 
 app.get('/', (req, res) => {
   res.send({ express: 'Hello From Express'})
-  res.render('index', {})
 })
 
 app.post('/send', (req, res) => {
