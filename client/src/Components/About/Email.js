@@ -1,9 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './About.css'
-import nodemailer from 'nodemailer'
-var api_key = 'key-XXXXXXXXXXXXXXXXXXXXXXX';
-var domain = 'www.mydomain.com';
+
 // var mailgun = require('mailgun-js')({apiKey: 'edd64e1dc48ff41a81da39d2f7a16101-c50f4a19-44cf626b', domain: 'jacobyeung.org'});
  
 // var data = {
@@ -43,7 +41,17 @@ class Email extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
   }
+  componentDidMount = () => this.fetchAPIMessage()
 
+  fetchAPIMessage = async () => {
+    try {
+      const res = await fetch(`/api/message`);
+      const { message } = await res.json();
+      this.setState({ message });
+    } catch (err) {
+      console.error(err);
+    }
+  };
   handleSubmit = function(event) {
     event.preventDefault()
     const { Title, Email, Content } = this.state

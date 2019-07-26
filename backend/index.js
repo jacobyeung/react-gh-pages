@@ -5,14 +5,24 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const Data = require('./data');
 const fetch = require('node-fetch')
-const API_PORT = 3001;
+const API_PORT = process.env.NODE_ENV || 5000;
 const app = express();
 const sgMail = require('@sendgrid/mail');
 const path = require('path')
 app.use(cors());
 const router = express.Router();
 
-app.use(express.static(path.join(__dirname, 'client/build')))
+app.use(express.static(path.join(__dirname, '../client/build')))
+
+app.get("/api/message", async (req, res, next) => {
+  try {
+    res.status(201).json({ message: "HELLOOOOO FROM EXPRESS" });
+  } catch (err) {
+    next(err);
+  }
+});
+
+
 // this is our MongoDB database
 const dbRoute = "mongodb+srv://hohorocks:hoho010201@jacobyeung-org-vxsz1.mongodb.net/test?retryWrites=true&w=majority"
 // connects our back end code with the database
@@ -89,6 +99,7 @@ app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`))
 
 app.get('/', (req, res) => {
   res.send({ express: 'Hello From Express'})
+  res.render('index', {})
 })
 
 app.post('/send', (req, res) => {

@@ -15,6 +15,7 @@
     "firebase-admin": "^8.2.0",
     "firebase-functions": "^3.1.0",
     "firebase-tools": "^7.1.0",
+    "http-proxy-middleware": "^0.19.1",
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.6.6",
     "morgan": "^1.9.1",
@@ -51,6 +52,5 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0"
-  },
-  "proxy": "https://react-gh-pages.herokuapp.com"
+  }
 }
