@@ -14,7 +14,7 @@ const router = express.Router();
 
 app.use(express.static(path.join(__dirname, 'client/build')))
 // this is our MongoDB database
-const dbRoute = process.env.DB_ROUTE
+const dbRoute = "mongodb+srv://hohorocks:hoho010201@jacobyeung-org-vxsz1.mongodb.net/test?retryWrites=true&w=majority"
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 
@@ -92,7 +92,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/send', (req, res) => {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey("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");
   const emailBody =
   {
     "personalizations": [
@@ -117,11 +117,11 @@ app.post('/send', (req, res) => {
     ]
   }
 
-  console.log('Bearer ' + process.env.SENDGRID_API_KEY)
+  console.log('Bearer ' + "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")
   var emailOptions = {
     'method': 'POST',
     'headers': {
-      'Authorization': 'Bearer ' + process.env.SENDGRID_API_KEY,
+      'Authorization': 'Bearer ' + "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",
       'Content-Type': 'application/json'
     },
     'body': JSON.stringify(emailBody),
