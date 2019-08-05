@@ -1,0 +1,35 @@
+.button {
+    background-color: inherit;
+    color: white;
+    text-transform: capitalize;
+    border-width: 0;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(53, 53, 53)	
+}
+.buttonIcon {
+    height: 5vh;
+    filter: invert(80%);
+}
+
+.rowFooter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    color: #d3d3d3;
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+.copyRight{
+    align-self: flex-end;
+    padding-right: 10px;
+}
+
+.sourceCode{
+    align-self: flex-end
+}
