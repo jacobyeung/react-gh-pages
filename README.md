@@ -2,9 +2,14 @@
 ### Installation Steps
 Open terminal.<br>
 Run `git clone https://github.com/jacobyeung/react-gh-pages.git`. <br>
+Run `cd react-gh-pages` <br>
 Run `npm install`.<br>
-Run `npm start`. <br>
-
+Run `cd client`<br>
+Run `npm install`<br>
+Run `cd ../backend` <br>
+Run `npm install`br>
+Run `cd..`. <br>
+Run `npm start` <br>
 ## Available Scripts
 
 In the project directory, you can run:
